@@ -1,0 +1,6 @@
+POST http://localhost:3333/spots
+Content-Type: multipart/form-data
+
+{
+  "thumbnail": "yudiyamane@mecajun.com"
+}
