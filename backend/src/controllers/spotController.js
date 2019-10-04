@@ -3,20 +3,20 @@ const User = require('../models/User')
 
 module.exports = {
   async index(request, response) {
-    const {tech} = request.query
+    const { tech } = request.query
     const spots = await Spot.find({ techs: tech })
     return response.json(spots)
   },
 
   async store(request, response) {
-    const { filename } = request.file
+    const { filename } = request
     const { company, techs, price } = request.body
     const { user_id } = request.headers
 
     const user = await User.findById(user_id)
 
     if (!user) {
-      return response.status(400).json({ error: 'user dos not exsist' })
+      return response.status(400).json({ error: 'user does not exsist' })
     }
 
     const spot = await Spot.create({

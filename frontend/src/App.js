@@ -3,29 +3,17 @@ import './App.css';
 
 import logo from './assests/logo.svg'
 
+import Routes from './routes'
+
 function App() {
+
   return (
     <div className="container">
       <img src={logo} alt="aircnc"/>
 
       <div className="content">
-        <p>ofereça <strong>spots</strong> para programadores e 
-        encontre <strong>talentos</strong> sua empresa! </p>
+        <Routes/>
       </div>
-
-
-      <form action="">
-        <label htmlFor="email">EMAIL *</label>
-        <input 
-          type="email" 
-          id="email"
-          placeholder="seu melhor email"
-        />
-        <button>Entrar</button>
-      </form>
-
-
-
     </div>
   );
 }

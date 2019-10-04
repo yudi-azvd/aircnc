@@ -8,7 +8,9 @@ module.exports = {
     filename: (request, file, callback) => {
       const extension = path.extname(file.originalname)
       const name = path.basename(file.originalname, extension)
-      callback(null, `${name}-${Date.now()}${path.extname(extension)}`)
+      console.log(`${path.extname(extension)}`, extension)
+      console.log(`${name}-${Date.now()}${extension}`)
+      callback(null, `${name}-${Date.now()}${extension}`)
     }
   })
 }
