@@ -1,2 +1,2 @@
-# Semana Omnistack #9: Aircnc
+# Aircnc
 Code along com @diego3g durante a Semana Omnistack #9.
