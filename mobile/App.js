@@ -1,20 +1,13 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'; 
+import { YellowBox } from 'react-native'
+
+// socket io client usa algumas coisas do browser que o native não tem
+YellowBox.ignoreWarnings([
+  'Unrecognized WebSocket',
+])
+
+import Routes from './src/routes'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>o que acontece?</Text>
-      <Text>olha só que massa</Text>
-    </View>
-  );
+  return <Routes />
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
